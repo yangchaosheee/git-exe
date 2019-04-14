@@ -1,0 +1,51 @@
+@charset "UTF-8";
+@import "common.scss";
+@import "_minix.scss";
+
+body{
+    background: pink;
+    font-size: change(30);
+    font-weight: bold;
+    color:green;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    >*{
+        width: 100%;
+    }
+    *{
+        font-size: change(12);
+    }
+    .header{
+        height: change(45);
+    }
+    .main{
+        flex: 1;
+        overflow-y: scroll;
+    }
+    .footer{
+        height: change(45);
+        display: flex;
+        padding-top: change(3.5);
+        >a{
+            width: 20%;
+            height: 100%;
+            text-align: center;
+            >i{
+                font-size: change(22);
+            }
+            >p{
+                line-height: change(16)
+            }
+        }
+    }
+}
+.ellip{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
